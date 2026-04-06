@@ -40,18 +40,18 @@ pip install pyrtlsdr numpy matplotlib scipy
 
 ## Usage
 
-Navigate to the directory containing `tetra_hunter.py` and run the script from your terminal.
+Navigate to the directory containing `main.py` and run the script from your terminal.
 
 **To use Manual Mode (Live Graph):**
 Replace `420.0` with your target frequency in MHz.
 ```bash
-python3 tetra_hunter.py -m 420.0
+python3 main.py -m 420.0
 ```
 
 **To use Scan Mode (Background Sweeping):**
 Replace the two numbers with your desired start and stop frequencies in MHz.
 ```bash
-python3 tetra_hunter.py -s 410.0 430.0
+python3 main.py -s 410.0 430.0
 ```
 
 ## Technical Limitations
