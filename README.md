@@ -21,6 +21,8 @@ This Python script reads raw RF samples from an RTL-SDR and calculates the Power
 * **Manual Mode (Real-Time UI):** Allows you to input a specific center frequency. It opens a live graph of the spectrum and draws green markers over any signal that matches the TETRA bandwidth profile.
 * **Scan Mode (Blind Sweeping):** Allows you to set a start and stop frequency. The script will step through the spectrum blindly, analyze it, and log the exact frequencies of any detected TETRA signals into a text file (`tetra_log.txt`). This mode runs without a graphical interface for maximum speed.
 
+You can check [example.png](example.png) to see how the graphical interface looks.
+
 ## Prerequisites
 
 This script is designed to run on Linux. You will need an RTL-SDR USB dongle and the appropriate system drivers installed.
