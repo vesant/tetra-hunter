@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   width="16"
+   height="16"
+   id="svg3883"
+   sodipodi:docname="network-error-symbolic.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="36.6875"
+     inkscape:cx="2.9028961"
+     inkscape:cy="6.7734242"
+     inkscape:window-width="1920"
+     inkscape:window-height="1030"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3883"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
+  <defs
+     id="defs3885" />
+  <metadata
+     id="metadata3888">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     class="error"
+     id="path6-3"
+     overflow="visible"
+     d="M 8.0000003,1.625 C 5.7343703,1.625 2.1674673,2.2401261 2.5e-7,4.1889262 L 7.2500003,14.375 H 8.7499998 L 16,4.1889264 C 13.833601,2.241193 10.26563,1.625 8.0000003,1.625 Z m 0,1 c 2.4032007,0 4.7114667,0.4838666 6.5599997,1.862 l -6.3100002,8.8879 -0.4999995,2e-4 -6.310432,-8.8881324 C 3.2891683,3.1088342 5.5978673,2.625 8.0000003,2.625 Z"
+     style="stroke-width:1;marker:none;fill:#c6262e;stroke:none" />
+</svg>

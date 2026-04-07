@@ -1,0 +1,7 @@
+
+--- New Scan: 2026-04-07 00:48:46 ---
+
+--- New Scan: 2026-04-07 00:51:07 ---
+[+] TETRA detected: 390.3730 MHz | Power: -27.1 dB | BW: 21.4 kHz
+[+] TETRA detected: 390.3732 MHz | Power: -29.1 dB | BW: 20.3 kHz
+[+] TETRA detected: 392.6481 MHz | Power: -29.7 dB | BW: 20.8 kHz
