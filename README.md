@@ -35,7 +35,7 @@ sudo apt install rtl-sdr librtlsdr-dev
 
 2. Install the required Python packages:
 ```bash
-pip install pyrtlsdr numpy matplotlib scipy
+pip install -r requirements.txt
 ```
 
 *Note: Ensure your user account has the proper permissions (udev rules) to access the RTL-SDR hardware without requiring root access.*
