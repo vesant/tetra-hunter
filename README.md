@@ -56,6 +56,12 @@ Replace the two numbers with your desired start and stop frequencies in MHz.
 python3 main.py -s 410.0 430.0
 ```
 
+After building the project with PyInstaller, you can make the application executable by running the provided script:
+```bash
+chmod +x make_executable.sh
+./make_executable.sh
+```
+
 ## Technical Limitations
 
 Please keep in mind that this tool relies on a heuristic approach (shape and bandwidth detection). It does not demodulate the signal to verify the bitstream. Therefore, it is entirely possible to encounter false positives. Any continuous wideband interference or digital signal that happens to be roughly 20 kHz wide might be mistakenly flagged as TETRA. For absolute certainty, a full software-defined radio decoder chain would be necessary, but this script serves as an excellent, lightweight reconnaissance tool to narrow down where you should be looking.
