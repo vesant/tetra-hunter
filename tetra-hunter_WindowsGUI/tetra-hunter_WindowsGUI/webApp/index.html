@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { background-color: #1e1e1e; margin: 0; overflow: hidden; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <canvas id="meuSpectrum" width="800" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('meuSpectrum');
+        const ctx = canvas.getContext('2d');
+
+        // function to app
+        function atualizarSpectrum(dadosFrequencia) {
+            // 'dadosFrequencia' será um array de números que vem do C#
+            
+            // clean old frame
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const larguraBarra = canvas.width / dadosFrequencia.length;
+            
+            for (let i = 0; i < dadosFrequencia.length; i++) {
+                const alturaBarra = dadosFrequencia[i];
+                
+                ctx.fillStyle = 'rgb(' + (alturaBarra + 100) + ', 50, 50)';
+                ctx.fillRect(i * larguraBarra, canvas.height - alturaBarra, larguraBarra, alturaBarra);
+            }
+        }
+    </script>
+</body>
+</html>
