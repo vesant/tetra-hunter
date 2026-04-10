@@ -1,6 +1,6 @@
-# TETRA Signal Hunter
+# TETRA Signal Hunter (Windows)
 
-Welcome to the TETRA Signal Hunter project. This tool was created for radio frequency (RF) enthusiasts and researchers who want to locate Terrestrial Trunked Radio (TETRA) signals in the wild using an RTL-SDR dongle on a Linux system. 
+Welcome to the TETRA Signal Hunter project. This Windows build targets radio frequency (RF) enthusiasts and researchers who want to locate Terrestrial Trunked Radio (TETRA) signals in the wild using an RTL-SDR dongle on Windows.
 
 It is designed strictly as a spectrum analysis tool. It looks for the visual and spectral "fingerprint" of a TETRA signal to identify active frequencies. It does not extract data, capture audio, or attempt any form of decryption. 
 
@@ -14,52 +14,45 @@ Because of this very specific shape and width, we can use mathematical heuristic
 
 ## How This Tool Works
 
-This Python script reads raw RF samples from an RTL-SDR and calculates the Power Spectral Density (PSD). It establishes a noise floor and looks for signal peaks. When it finds a peak, it measures the width of the signal at its base. If the signal width falls between 16 kHz and 24 kHz (our heuristic threshold for a TETRA channel), the script flags it as a probable TETRA signal.
+This app reads raw RF samples from an RTL-SDR and calculates the Power Spectral Density (PSD). It establishes a noise floor and looks for signal peaks. When it finds a peak, it measures the width of the signal at its base. If the signal width falls between 16 kHz and 24 kHz (our heuristic threshold for a TETRA channel), the app flags it as a probable TETRA signal.
 
 ### Features
 
-* **Manual Mode (Real-Time UI):** Allows you to input a specific center frequency. It opens a live graph of the spectrum and draws green markers over any signal that matches the TETRA bandwidth profile.
-* **Scan Mode (Blind Sweeping):** Allows you to set a start and stop frequency. The script will step through the spectrum blindly, analyze it, and log the exact frequencies of any detected TETRA signals into a text file (`tetra_log.txt`). This mode runs without a graphical interface for maximum speed.
+* **Manual Mode (Real-Time UI):** Enter a specific center frequency. The Windows GUI opens a live spectrum graph and draws green markers over any signal that matches the TETRA bandwidth profile.
+* **Scan Mode (Blind Sweeping):** Set a start and stop frequency. The scanner steps through the spectrum, analyzes it, and logs the exact frequencies of any detected TETRA signals into a text file (`tetra_log.txt`).
 
 You can check [example.png](example.png) to see how the graphical interface looks.
 
-## Prerequisites
+## Prerequisites (Windows)
 
-This script is designed to run on Linux. You will need an RTL-SDR USB dongle and the appropriate system drivers installed.
+You will need a Windows PC, an RTL-SDR USB dongle, and the correct driver for SDR access.
 
-1. Install the RTL-SDR system libraries:
+1. Install an RTL-SDR driver with Zadig (WinUSB). There are many guides online; any standard RTL-SDR Zadig install procedure works.
+2. If you are running the Python build, install Python 3.10+ and then:
 ```bash
-sudo apt update
-sudo apt install rtl-sdr librtlsdr-dev
+pip install -r python_binaries\requirements.txt
 ```
 
-2. Install the required Python packages:
-```bash
-pip install -r requirements.txt
-```
+## Usage (Windows)
 
-*Note: Ensure your user account has the proper permissions (udev rules) to access the RTL-SDR hardware without requiring root access.*
+### Windows GUI (recommended)
 
-## Usage
+Open the Visual Studio solution at `tetra-hunter_WindowsGUI/tetra-hunter_WindowsGUI.slnx`, build the project, then run the app.
 
-Navigate to the directory containing `main.py` and run the script from your terminal.
+### Python CLI (optional)
 
-**To use Manual Mode (Live Graph):**
+If you prefer the CLI tools, run the Python version from the `python_binaries` folder.
+
+**Manual Mode (Live Graph):**
 Replace `420.0` with your target frequency in MHz.
 ```bash
-python3 main.py -m 420.0
+python python_binaries\main.py -m 420.0
 ```
 
-**To use Scan Mode (Background Sweeping):**
+**Scan Mode (Background Sweeping):**
 Replace the two numbers with your desired start and stop frequencies in MHz.
 ```bash
-python3 main.py -s 410.0 430.0
-```
-
-After building the project with PyInstaller, you can make the application executable by running the provided script:
-```bash
-chmod +x make_executable.sh
-./make_executable.sh
+python python_binaries\main.py -s 410.0 430.0
 ```
 
 ## Technical Limitations
